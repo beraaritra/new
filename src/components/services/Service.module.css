@@ -1,0 +1,306 @@
+.service_section {
+    padding: 100px 0px 60px;
+    position: relative;
+}
+#services_section {
+    position: relative;
+}
+.service_bg {
+   position: absolute;
+    right: 0;
+    top: -220px;
+    background: url(../../../public/bg2.png) no-repeat center;
+    background-size: 100% 100%;
+    width: 700px;
+    height: 1000px;
+    z-index: -1;
+}
+.service_section h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 58px;
+    color: #1F1E21;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.service_row1 {
+    background: linear-gradient(180deg, #FAFAFB 0%, rgba(255, 255, 255, 0) 53%);
+    border-radius: 0px 50px 0px 50px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+.view_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view_btn button {
+    width: 153px;
+    height: 45px;
+    border-radius: 0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00FF6B;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171B23;
+
+}
+.view_btn button:hover {
+    border-color: #ce3847;
+    color: #ce3847;
+}
+.service_row1 h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #005FE5;
+    text-align: center;
+}
+.service_row1 p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    max-width: 820px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.service_expand {
+    position: relative;
+}
+.service_expand h4 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.service_card {
+    box-shadow: 0px 4px 20px 0px #B3B3B340;
+    background: #FFFFFF;
+    border-bottom: 2px solid #005FE5;
+    padding: 35px 25px 30px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.card_bg {
+    position: absolute;
+    right: -15px;
+  top: -15px;
+}
+.card_heading {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 20px 0px;
+    color: #171B23;
+}
+.card_content {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.service_col1 h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-bottom: 20px;
+    color: #171B23;
+}
+.service_col1 p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #171B23;
+    margin-bottom: 10px;
+}
+.service_col1 h5 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 30px 0px 20px;
+}
+.service_col1 ul li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    display: flex;
+    margin-bottom: 20px;
+    color: #171B23;
+    align-items: flex-start;
+}
+.service_col1 ul li strong {
+    color: #005FE5;
+}
+/* .service_col1 ul li img {
+    width: 40px;
+} */
+.service_col1 ul li span {
+    width: calc(100% - 40px);
+    padding-left: 25px;
+}
+.service_col2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.service_section2 {
+    padding: 40px 0px;
+}
+.service_section2 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    padding-bottom: 0px;
+    color: #171B23;
+}
+.section2_col1 h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 25px;
+    display: block;
+    color: #171B23;
+    text-align: left;
+}
+.section2_col1 h3 img {
+    width: 33px;
+    margin-bottom: 15px;
+}
+.section2_col1 {
+    padding: 40px 0px;
+}
+.section2_col1 p {
+    font-size: 18px;
+    color: #171B23;
+    font-weight: 500;
+    max-width: 505px;
+    text-align: left;
+    line-height: 26px;
+    margin: inherit;
+}
+.border_rght {
+    border-right: 2px solid #005FE5;
+}
+
+.service_section3 {
+    padding: 40px 0px;
+    background: #fff url(../../../public/choose2.jpg) no-repeat center;
+    background-size: 100%;
+}
+.service_section3 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #171B23;
+}
+.service_section4 {
+    padding: 40px 0px;
+    background: #fff url(../../../public/choose3.jpg) no-repeat center;
+    background-size: 100%;
+}
+.service_section4 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #171B23;
+}
+.service4_text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    color: #171B23;
+    max-width: 875px;
+}
+
+@media(max-width:767.98px) {
+    .service_section h2 {
+    font-size: 40px;
+    line-height: 50px;
+    }
+    .service_row1 h2 {
+    font-size: 30px !important;
+    line-height: 40px !important;
+    }
+    .service_expand .w-1\/3 {
+    width: 100% !important;
+    }
+    .service_expand .flex {
+    display: block !important;
+    }
+    .service_card {
+        height: auto;
+    }
+    .service_section2 .w-1\/2 {
+    width: 100% !important;
+    }
+    .section2_col1 {
+  padding: 20px 0px;
+}
+.service_row1 {
+  padding: 10px;
+}
+.section2_col1 h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section2_col1 p {
+  max-width: 100%;
+  text-align: center;
+}
+.service_section {
+  padding: 40px 0 60px;
+}
+.service_row1 h3 {
+  font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 7px;
+    color: #005fe5;
+    text-align: center;
+}
+.service_expand h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+    margin-top: 20px;
+}
+.service_row1 p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    margin: auto auto 10px;
+}
+.view_btn button {
+  font-size: 14px;
+}
+.card_heading {
+  font-size: 20px;
+  line-height: 26px;
+}
+.card_content {
+  line-height: 26px;
+}
+.card_img img {
+  width: 34px;
+  height: 34px;
+}
+}

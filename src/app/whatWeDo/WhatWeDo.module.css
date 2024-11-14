@@ -1,0 +1,201 @@
+.herosection {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.herosection .bannerwrap {
+  width: 100%;
+  padding: 0px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.herosection .bannerwrap .content {
+  width: 100%;
+  max-width: 55%;
+  height: auto;
+}
+.herosection .bannerwrap .content h1 {
+  font-size: 3rem;
+  line-height: 58px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+.herosection .bannerwrap .content h1 span {
+  color: #0273fa;
+}
+.herosection .bannerwrap .content p {
+  font-size: 1.125rem;
+  color: #000;
+  margin-top: 30px;
+  line-height: 29px;
+}
+.herosection .bannerwrap .content .hero_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: #0273fa;
+  border-radius: 16px;
+  margin-top: 50px;
+  transition: 0.2s;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.herosection .bannerwrap .content .hero_btn button:hover {
+  background-color: #004ca6;
+}
+.herosection .bannerwrap .content .hero_btn button:hover {
+  background-color: #004ca6;
+}
+
+/* Content */
+.whatwedocontentsec {
+  width: 100%;
+  height: auto;
+  padding: 80px 15px 0;
+  background-color: #fff;
+}
+.whatwedocontentsec .contentwrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.whatwedocontentsec .contentwrap .image {
+  width: 100%;
+  max-width: 35%;
+  margin: 0px auto;
+}
+.whatwedocontentsec .contentwrap .content {
+  width: 100%;
+  max-width: 65%;
+  height: auto;
+}
+.whatwedocontentsec .contentwrap .content h2 {
+  font-size: 1.5rem;
+  color: #0273fa;
+  font-weight: 600;
+  line-height: 29px;
+  padding-bottom: 10px;
+}
+.whatwedocontentsec .contentwrap .content p {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #000;
+  line-height: 29px;
+}
+.whatwedocontentsec .betterchoice {
+  width: 100%;
+  margin-top: 50px;
+}
+.whatwedocontentsec .betterchoice h4 {
+  font-size: 1.25rem;
+  line-height: 29px;
+  font-weight: 500;
+  color: #000;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap .box {
+  width: 30%;
+  flex: 0 0 30%;
+  min-height: 150px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #7a7a7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap .box img {
+  width: 50px;
+  height: 50px;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap .box .content p {
+  font-size: 1rem;
+  line-height: 24px;
+  color: #000;
+  font-weight: 500;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap .box:hover {
+  background-color: #0273fa;
+  border: 1px solid #0273fa;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap .box:hover p {
+  color: #fff;
+}
+.whatwedocontentsec .betterchoice .betterchoicewrap .box:hover img {
+  filter: invert(1);
+}
+@media (max-width: 1024px) {
+  .whatwedocontentsec .betterchoice .betterchoicewrap {
+    flex-direction: column;
+  }
+  .whatwedocontentsec .betterchoice .betterchoicewrap .box {
+    width: 100%;
+    flex: 0 0 100%;
+    min-height: auto;
+  }
+  .whatwedocontentsec .contentwrap {
+    gap: 50px;
+  }
+  .whatwedocontentsec .contentwrap .content {
+    max-width: 50%;
+  }
+  .whatwedocontentsec .contentwrap .image {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 840px) {
+  .herosection .bannerwrap {
+    width: 100%;
+    padding: 0px 20px 0;
+    flex-direction: column;
+  }
+  .herosection .bannerwrap .heroimage {
+    display: none;
+  }
+  .herosection .bannerwrap .content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .whatwedocontentsec .contentwrap {
+    flex-direction: column-reverse;
+  }
+  .whatwedocontentsec .contentwrap .content {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .herosection .bannerwrap .content h1 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .herosection .bannerwrap .content button {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 460px) {
+  .whatwedocontentsec .contentwrap .image {
+    max-width: 100%;
+  }
+
+  .whatwedocontentsec .contentwrap .image img {
+    width: 100%;
+  }
+}

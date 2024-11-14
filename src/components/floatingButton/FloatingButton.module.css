@@ -1,0 +1,436 @@
+/* ContactForm.module.css */
+.formContainer {
+  border-radius: 16px;
+  background: #fff;
+  padding: 0px;
+  margin-left: auto;
+}
+
+.formContainer h2 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 48.09px;
+  letter-spacing: 0.04em;
+  color: #243442;
+  margin-bottom: 20px;
+}
+.formContainer p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  color: #7c7c7c;
+  margin-bottom: 25px;
+}
+.input_box {
+  margin-bottom: 20px;
+}
+.modal_main {
+  display: flex;
+  padding-bottom: 25px;
+  width: 1036px;
+}
+.modal_col1 {
+  width: 300px;
+}
+.modal_col2 {
+  width: calc(100% - 300px);
+  padding: 50px 40px 50px 60px;
+}
+.checkboxLabel {
+  width: max-content;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+  margin-bottom: 10px;
+  color: #243442;
+  display: block;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer select,
+.formContainer textarea {
+  padding: 8.5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 0px;
+  background: #fff;
+  width: 100%;
+}
+.css-1dimb5e-singleValue {
+  color: rgb(0, 0, 0) !important;
+  font-size: 14px !important;
+}
+.formContainer .checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.formContainer button {
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 19px;
+  background: #e13737;
+  font-size: 20px;
+  font-weight: 600;
+  width: 185px;
+}
+
+.formContainer button:hover {
+  background-color: #ce3847;
+  color: #fff;
+}
+.rowbox {
+  margin-bottom: 30px;
+}
+.rowbox.flex.justify-between input {
+  background: none !important;
+}
+.datetimeinput {
+  border-radius: 4px;
+  border: 1px solid #000;
+  margin-top: 5px;
+}
+
+.datetimeinput input {
+  padding: 8px;
+}
+
+/* .css-13cymwt-control {
+  border-color: #000 !important;
+  margin-top: 6px !important;
+  min-height: 43px !important;
+} */
+
+.css-1u9des2-indicatorSeparator {
+  background-color: #000 !important;
+}
+
+.css-1xc3v61-indicatorContainer {
+  color: #000 !important;
+}
+
+.demoActive {
+  color: #a9c25d;
+  height: 50%;
+}
+
+.demoInctive {
+  background-color: #416a59 !important;
+  height: 100%;
+}
+.modal_thank {
+  padding: 10px 40px 40px;
+  text-align: center;
+  /* display: none; */
+  width: 700px;
+}
+.modal_thank img {
+  display: inline-block;
+}
+.modal_thank h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58.09px;
+  width: 100%;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.modal_thank p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  color: #000;
+  max-width: 587px;
+  margin: auto;
+}
+.mobileimg {
+  display: none;
+}
+@media (max-width: 767px) {
+  .formContainer {
+    max-width: 100%;
+  }
+}
+
+.errorMessage {
+  color: red;
+  margin-bottom: -15px;
+  font-size: 12px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.errorMessage svg {
+  width: 16px;
+  margin-right: 6px;
+}
+.logoMenu h2 {
+  width: 25px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active-new {
+  position: relative !important;
+}
+.active-new a {
+  color: #a9c25d !important;
+}
+
+.active-new:after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 30px !important;
+  background: #a9c25d !important;
+}
+.toggle-mnu {
+  cursor: pointer;
+}
+.mobileNavebar button {
+  cursor: pointer;
+}
+.float_button {
+  position: fixed;
+  z-index: 999;
+  bottom: 55px;
+  left: 30px;
+  background: #bf1818;
+  padding: 20px;
+  border-radius: 17px;
+  box-shadow: 0px 4px 25px 0px #88888840;
+  width: 270px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.float_button h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 18.15px;
+}
+.float_button h2 span {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 21.78px;
+  display: block;
+}
+.down_button {
+  width: 100%;
+  background: #befcff;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 11.7px 0px #fd454c4a;
+  font-size: 18px;
+  font-weight: 700;
+  color: #464646;
+  border-radius: 10px;
+  width: 180px;
+  margin: auto;
+  margin-top: 10px;
+}
+.down_button:hover {
+  background: #a0f5fa;
+}
+.ebook_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -73px;
+  margin-bottom: 10px;
+}
+.mobile_book {
+  display: none;
+}
+@media (max-width: 1025) {
+  .modal_thank h2 {
+    font-size: 38px;
+    line-height: 48.09px;
+  }
+  .modal_main {
+    display: block;
+  }
+  .modal_main {
+    display: block;
+    padding-bottom: 0;
+    width: 1036px;
+  }
+  .formContainer h2 {
+    font-size: 38px;
+    line-height: 48.09px;
+  }
+  .Navbar_modal_main__4xKDz {
+    width: 800px;
+  }
+}
+@media (max-width: 991px) {
+  .modal_col1 {
+    display: none !important;
+  }
+  .mobileimg {
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg, #fda9ac 0%, #d31a21 3.5%, #495561 100%);
+    padding-top: 20px;
+    justify-content: end;
+  }
+  .modal_main {
+    display: block;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  .mobileimg img {
+    width: auto;
+  }
+  .popup_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .formContainer h2 {
+    font-size: 24px !important;
+    line-height: 34px !important;
+    text-align: center;
+  }
+  .formContainer p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .modal_col2 {
+    width: 100% !important;
+    padding: 25px !important;
+  }
+  .formContainer h2 {
+    font-size: 38px !important;
+    line-height: 48px !important;
+  }
+  .input_box {
+    margin-bottom: 10px !important;
+  }
+  .formContainer {
+    height: 100%;
+  }
+  .modal_main {
+    display: flex !important;
+    padding-bottom: 0 !important;
+    height: 100% !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  .modal_thank {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    padding: 20px !important;
+  }
+  .modal_thank p {
+    margin: inherit !important;
+  }
+}
+@media (max-width: 767px) {
+  .formContainer {
+    max-width: 100%;
+  }
+  .formContainer h2 {
+    max-width: 100% !important;
+    margin-top: 0 !important;
+  }
+  .navbar {
+    display: none !important;
+  }
+  .float_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 0;
+    left: inherit;
+    border: none;
+    bottom: 90px;
+    right: 20px;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .ebook_img {
+    display: none;
+  }
+  .float_button h2 {
+    font-size: 14px !important;
+    font-weight: 400;
+    color: #fff;
+    line-height: 18.15px !important;
+    text-align: left;
+    padding-right: 30px !important;
+    margin-bottom: 0 !important;
+    display: none !important;
+  }
+  .float_button h2 span {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    display: block;
+  }
+  .down_button {
+    height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    width: auto;
+    margin: inherit;
+    margin-top: 0;
+    padding: 0px 10px;
+    display: none;
+  }
+  .mobile_book {
+    display: block;
+    width: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .formContainer label {
+    font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  .float_button {
+    padding: 0px;
+  }
+  .float_button h2 {
+    font-size: 12px !important;
+    line-height: 15px !important;
+    padding-right: 6px !important;
+  }
+  .float_button h2 span {
+    font-size: 12px !important;
+  }
+  .down_button {
+    height: 30px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,109 @@
+.clientsuccesssection {
+  width: 100%;
+  height: auto;
+  padding: 100px 15px 0;
+  background-color: #fff;
+}
+
+.clientsuccesssection .storywrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.clientsuccesssection .storywrap .heading {
+  width: 100%;
+  max-width: 40%;
+}
+.clientsuccesssection .storywrap .heading h1 {
+  font-size: 2.625rem;
+  font-weight: 800;
+  line-height: 50px;
+  color: #000;
+}
+.clientsuccesssection .storywrap .heading h1 span {
+  color: #0273fa;
+}
+.clientsuccesssection .storywrap .heading p {
+  margin-top: 30px;
+  font-size: 1.125rem;
+  line-height: 29px;
+  font-weight: 400;
+  color: #000;
+}
+.clientsuccesssection .storywrap .clientslider {
+  width: 100%;
+  max-width: 60%;
+}
+.clientsuccesssection .storywrap .review {
+  width: 100%;
+  background-color: #eaf3ff;
+  padding: 20px;
+  border-radius: 16px;
+  min-height: 530px;
+  transition: 0.5s;
+}
+.clientsuccesssection .storywrap .review p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 30px;
+  color: #000;
+}
+.clientsuccesssection .storywrap .review h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 50px;
+}
+.clientsuccesssection .storywrap .review span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 22.5px;
+  color: #000;
+}
+.clientsuccesssection .storywrap .review:hover {
+  background: #0273fa;
+}
+.clientsuccesssection .storywrap .review:hover p {
+  color: #fff;
+}
+.clientsuccesssection .storywrap .review:hover h4 {
+  color: #fff;
+}
+.clientsuccesssection .storywrap .review:hover span {
+  color: #fff;
+}
+
+.clientsuccesssection .storywrap .review:hover img {
+  filter: brightness(3.5);
+}
+@media (max-width: 1024px) {
+  .clientsuccesssection .storywrap {
+    flex-direction: column;
+  }
+  .clientsuccesssection .storywrap .heading {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .clientsuccesssection .storywrap .clientslider {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .clientsuccesssection {
+    padding: 50px 15px 0;
+  }
+  .clientsuccesssection .storywrap .heading h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .clientsuccesssection .storywrap .review {
+    min-height: auto;
+  }
+}

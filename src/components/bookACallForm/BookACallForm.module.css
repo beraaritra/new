@@ -1,0 +1,121 @@
+/* ContactForm.module.css */
+.formContainer {
+  border-radius: 4px;
+  background: #fff;
+  padding: 20px;
+  max-width: 450px;
+  margin-left: auto;
+}
+
+.formContainer h2 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+.checkboxLabel {
+  width: max-content;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer select,
+.formContainer textarea {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 0px;
+  background: #fff;
+  width: 100%;
+}
+
+.formContainer .checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.formContainer button {
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #fa4659;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.formContainer button:hover {
+  background-color: #ce3847;
+  color: #fff;
+}
+
+.datetimeinput {
+  border-radius: 4px;
+  border: 1px solid #000;
+  margin-top: 5px;
+}
+
+.datetimeinput input {
+  padding: 8px;
+}
+
+/* .css-13cymwt-control {
+    border-color: #000 !important;
+    margin-top: 6px !important;
+    min-height: 43px !important;
+} */
+
+.css-1u9des2-indicatorSeparator {
+  background-color: #000 !important;
+}
+
+.css-1xc3v61-indicatorContainer {
+  color: #000 !important;
+}
+
+.demoActive {
+  color: #a9c25d;
+  height: 50%;
+}
+
+.demoInctive {
+  background-color: #416a59 !important;
+  height: 100%;
+}
+.rowbox.flex.justify-between input {
+  background: none !important;
+}
+@media (max-width: 767px) {
+  .formContainer {
+    max-width: 100%;
+  }
+}
+
+.errorMessage {
+  color: red;
+  margin-bottom: -10px;
+  font-size: 12px;
+}
+.flex1 .rdtPicker {
+  z-index: 99 !important;
+  bottom: 46px !important;
+}
+@media (max-width: 767px) {
+  .formContainer {
+    max-width: 100%;
+  }
+}

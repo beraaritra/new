@@ -1,0 +1,549 @@
+.bookAFormSection {
+  background: #2b454d url(../../public/banner.png) no-repeat center bottom;
+  background-size: 260px;
+  padding: 15px 0px;
+}
+
+.bookAFormSection .left {
+  width: 60%;
+}
+.bookAFormSection .left h1 {
+  font-size: 48px;
+  font-weight: normal;
+  color: #fff;
+  line-height: normal;
+  max-width: 680px;
+  padding-top: 40px;
+  line-height: 64px;
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+}
+.bookAFormSection .left h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 56px;
+  height: 1px;
+  background: rgba(255, 238, 238, 0.51);
+}
+.bookAFormSection .left h2 {
+  color: #ff5858;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: normal;
+  line-height: 42px;
+}
+.bookAFormSection .right {
+  width: 40%;
+}
+
+.startupContentSection .startupContentSection1,
+.startupContentSection .startupContentSection2 {
+  background: #f7f7f7;
+  padding: 40px 0px;
+}
+.startupContentSection .startupContentSection1 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  position: relative;
+}
+.startupContentSection .startupContentSection1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2b454d;
+  height: 30%;
+  z-index: 0;
+}
+.startupContentSection1 p {
+  color: #121e14;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 28px; /* 137.5% */
+}
+.startup_wrepp {
+  border-radius: 4px;
+  background: linear-gradient(180deg, #fff 34.9%, rgba(255, 255, 255, 0) 100%);
+  padding: 20px;
+}
+.startupContentSection1 ul {
+  padding-left: 35px;
+}
+.startupContentSection1 ul li {
+  color: #121e14;
+  font-size: 18px;
+  list-style: none;
+  font-weight: normal;
+  line-height: 28px; /* 137.5% */
+  position: relative;
+  margin-bottom: 15px;
+}
+.startupContentSection1 ul li:after {
+  content: "";
+  position: absolute;
+  background: url(../../public/arrow_right.png) no-repeat left center;
+  background-size: 19px 19px;
+  width: 19px;
+  height: 19px;
+  top: 5px;
+  left: -40px;
+}
+.startupContentSection2 h2 {
+  color: #000;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: normal;
+}
+.startupContentSection2 p {
+  color: #121e14;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 28px; /* 137.5% */
+}
+.startupContentSection2 ul {
+  padding-left: 50px;
+}
+.startupContentSection2 ul li {
+  color: #121e14;
+  font-size: 18px;
+  list-style: none;
+  font-weight: normal;
+  line-height: 24px; /* 137.5% */
+  position: relative;
+  margin-bottom: 10px;
+}
+.startupContentSection2 ul li:after {
+  content: "";
+  position: absolute;
+  background: url(../../public/arrow_right.png) no-repeat left center;
+  background-size: 19px 19px;
+  width: 19px;
+  height: 19px;
+  top: 3px;
+  left: -40px;
+}
+.achievementSection {
+  padding: 0;
+  position: relative;
+}
+.achievementSection .container {
+  position: relative;
+  z-index: 1;
+}
+.achievementSection::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 0;
+  background: #1e373e;
+}
+.achievementSection::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 0;
+  background: #d5faf0;
+}
+.achievementSectionButton {
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  justify-content: center;
+}
+.achievementSectionButton button {
+  border-radius: 4px;
+  background: #39395f;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 15px 10px;
+}
+.achievementSectionButton button:hover {
+  background: #4c4c7e;
+  color: #fff;
+}
+.accioEsopSection {
+  background: #424242 url(../../public/bluebg.png) no-repeat bottom right;
+  padding: 60px 0px 40px;
+}
+.accioEsopSection h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+.accioEsopSection p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.getStartedSectionButton .scheduleButton {
+  margin-right: 20px;
+  background-color: #0f7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.diffrence {
+  background-color: #f7f7f7;
+  background-image: url(../../public/bg1.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 20px 0px;
+}
+.diffrence h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.diffrence p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 20px 0px;
+  border-bottom: 1px solid #c2c2c2;
+}
+.diffrence p:last-child {
+  border-bottom: 0;
+}
+.offersection {
+  padding: 40px 1rem;
+  background-color: #fff;
+  background-image: url(../../public/bg2.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.offersection h2 {
+  color: #384473;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.offersection h6 {
+  color: #121e14;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.offersection ul {
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+.offersection ul li {
+  color: #121e14;
+  list-style: disc;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.offersection p {
+  color: #121e14;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+.winningTeamSection {
+  background-color: #424242;
+  background-image: url(../../public/bg5.png), url(../../public/bg4.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, bottom right;
+  padding: 30px 0px;
+  text-align: center;
+}
+.winningTeamSection h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.winningTeamSection p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.winningTeamSection .cards {
+  background: #f5f5f5;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 15px;
+  height: 100%;
+}
+.winningTeamSection .cards img {
+  width: 201px;
+  height: 201px;
+  flex-shrink: 0;
+  margin: auto;
+  border-radius: 100%;
+  border: 2px solid #73a24e;
+}
+.winningTeamSection .cards h3 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 15px 0px;
+}
+.winningTeamSection .cards h4 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.getStartedSection {
+  background: #1e373e;
+  padding: 60px 1rem 60px;
+  text-align: center;
+  position: relative;
+}
+.getStartedSection h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.getStartedSection h2 img {
+  margin-right: 20px;
+}
+.getStartedSection p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 28p;
+}
+.getStartedSectionButton .scheduleButton {
+  width: 265px;
+  height: 57px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #fa4659;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.getStartedSectionButton .scheduleButton:hover {
+  background: #ce3847;
+  color: #fff;
+}
+.getStartedSection .container {
+  position: relative;
+  z-index: 1;
+}
+.bg_wrep {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.Satisfied {
+  padding: 50px 50px;
+}
+.Satisfied h2 {
+  color: #000;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+.clint_image img {
+  width: 225px;
+  height: 199px;
+  border-radius: 10px;
+}
+.clint_details p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 22px; /* 137.5% */
+}
+.datetimeinput {
+  border-radius: 4px;
+  border: 1px solid #000;
+  margin-top: 5px;
+}
+.datetimeinput input {
+  padding: 8px;
+  width: 100%;
+}
+.mobilebox {
+  display: none;
+}
+.rowbox.flex.justify-between input {
+  background: none !important;
+}
+.checkboxLabel {
+  width: max-content;
+}
+@media (max-width: 991px) {
+  .bookAFormSection {
+    background-image: none;
+  }
+}
+@media (max-width: 767px) {
+  .startup_wrepp {
+    border-radius: 0;
+    padding: 0;
+  }
+  .formContainer .left {
+    width: 100%;
+  }
+  .formContainer .right {
+    width: 100%;
+  }
+  .bookAFormSection .left {
+    width: 100%;
+  }
+  .bookAFormSection .right {
+    width: 100%;
+  }
+  .bookAFormSection .left h1 {
+    font-size: 26px;
+    line-height: normal;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .bookAFormSection .left h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 23px;
+    line-height: normal;
+  }
+  .bookAFormSection .left h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bookAFormSection .container {
+    max-width: 100% !important;
+  }
+  .bookAFormSection .flex {
+    display: block !important;
+  }
+  .BookACallForm_formContainer {
+    max-width: 100%;
+  }
+  .startupContentSection1 .mx-auto.flex.justify-between {
+    display: block;
+  }
+  .startupContentSection1 .w-4\/6.pl-3.pr-3 {
+    width: 100%;
+    padding: 0;
+  }
+  .startupContentSection1 .w-2\/6.pl-3.pr-3 {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .startupContentSection2 .w-4\/6.pl-3.pr-3 {
+    width: 100%;
+    padding: 0;
+  }
+  .startupContentSection2 .w-2\/6.pl-3.pr-3 {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .startupContentSection2 .flex.justify-between {
+    display: block;
+  }
+  .startupContentSection .startupContentSection1,
+  .startupContentSection .startupContentSection2 {
+    padding: 20px 0px;
+  }
+  .winningTeamSection .cards {
+    margin-bottom: 20px;
+  }
+  .getStartedSection h2 {
+    flex-direction: column;
+    font-size: 24px !important;
+  }
+  .getStartedSection h2 img {
+    margin-bottom: 10px;
+  }
+  .startupContentSection2 h2 {
+    font-size: 24px !important;
+  }
+  .achievementSection h2 {
+    font-size: 24px !important;
+  }
+  .achievementSectionButton button {
+    font-size: 16px !important;
+  }
+  .offersection h2 {
+    font-size: 24px !important;
+  }
+  .formContainer h2 {
+    max-width: 300px;
+    margin: auto;
+    text-align: center !important;
+  }
+  .Satisfied {
+    padding: 30px 0px;
+  }
+  .diffrence {
+    background-image: none !important;
+  }
+  .winningTeamSection {
+    /* background-color: #39395F;
+    background-image: url(../../public/winingbg.png), url(../../public/bg4.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 15px 90px, bottom right; */
+    padding: 30px 0px;
+    text-align: center;
+  }
+  .getStartedSectionButton .scheduleButton {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .Satisfied {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .startupContentSection1 ul {
+    padding-left: 50px !important;
+  }
+}

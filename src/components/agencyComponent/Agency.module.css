@@ -1,0 +1,106 @@
+.agencysec {
+  width: 100%;
+  padding: 100px 15px 0;
+  background-color: #fff;
+}
+.agencysec .agencywrap {
+  width: 100%;
+  background-color: #d7e9ff;
+  padding: 60px 100px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.agencysec .agencywrap .image {
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+}
+.agencysec .agencywrap .image img {
+  width: 100%;
+  height: auto;
+}
+.agencysec .agencywrap .content {
+  width: 60%;
+}
+.agencysec .agencywrap .content h1 {
+  font-size: 2.25rem;
+  line-height: 54px;
+  font-weight: 700;
+  color: #000;
+}
+.agencysec .agencywrap .content p {
+  margin-top: 50px;
+  font-size: 1, 25rem;
+  line-height: 30px;
+  font-weight: 500;
+  color: #000;
+}
+.agencysec .agencywrap .content .btnwrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.agencysec .agencywrap .content .btnwrap button {
+  max-width: 269px;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #9dc9ff;
+  border-radius: 16px;
+  gap: 10px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+.agencysec .agencywrap .content .btnwrap button:hover {
+  background-color: #0273fa;
+  color: #fff;
+  transition: 0.2s !important;
+}
+@media (max-width: 1150px) {
+  .agencysec .agencywrap {
+    padding: 25px 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .agencysec .agencywrap {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .agencysec .agencywrap .content {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .agencysec .agencywrap .image {
+    width: 100%;
+  }
+  .agencysec {
+    padding: 50px 15px 0;
+  }
+  .agencysec .agencywrap .content h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .agencysec .agencywrap .content h1 {
+    font-size: 2rem;
+    line-height: 45px;
+    font-weight: 700;
+    color: #000;
+  }
+  .agencysec .agencywrap .content .btnwrap {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,63 @@
+.accountingsystem {
+  width: 100%;
+  height: auto;
+  padding: 100px 15px 0;
+}
+.accountingsystem .heading {
+  width: 100%;
+  text-align: center;
+}
+.accountingsystem .heading h1 {
+  font-size: 2.625rem;
+  line-height: 63px;
+  font-weight: 700;
+  color: #000;
+}
+.accountingsystem .heading h1 span {
+  color: #0273fa;
+}
+.accountingsystem .logowrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+.accountingsystem .logowrap .logo {
+  min-width: 200px;
+  height: 100px;
+  border: 1px solid #bedcff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accountingsystem .subheading {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.accountingsystem .subheading h2 {
+  font-size: 1.5rem;
+  line-height: 29px;
+  font-weight: 600;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .accountingsystem {
+    padding: 50px 15px 0;
+  }
+  .accountingsystem .heading h1 {
+    font-size: 2rem;
+  }
+  .accountingsystem .logowrap {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 525px) {
+  .accountingsystem .logowrap .logo {
+    min-width: 100%;
+  }
+}

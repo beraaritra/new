@@ -1,0 +1,454 @@
+.hero_banner {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.hero_banner .bannerwrap {
+  width: 100%;
+  padding: 80px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero_banner .bannerwrap .content {
+  width: 100%;
+  max-width: 55%;
+  height: auto;
+}
+.hero_banner .bannerwrap .content h1 {
+  font-size: 3rem;
+  line-height: 58px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+.hero_banner .bannerwrap .content h1 span {
+  color: #0273fa;
+}
+.hero_banner .bannerwrap .content p {
+  font-size: 1.125rem;
+  color: #000;
+  margin-top: 30px;
+  line-height: 29px;
+}
+.hero_banner .bannerwrap .content .hero_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: #0273fa;
+  border-radius: 16px;
+  margin-top: 50px;
+  transition: 0.2s;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.hero_banner .bannerwrap .content .hero_btn button:hover {
+  background-color: #004ca6;
+}
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 5px;
+  border-radius: 50px;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 60px;
+  width: 100%;
+  right: 0;
+  text-align: left;
+}
+.hero_banner .bannerwrap .heroimage {
+  width: 100%;
+  max-width: 40%;
+}
+.hero_banner .bannerwrap .heroimage img {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.formContainer {
+  border-radius: 16px;
+  background: #fff;
+  padding: 0px;
+  margin-left: auto;
+}
+
+.formContainer h2 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 58.09px;
+  letter-spacing: 0.04em;
+  color: #243442;
+}
+
+.formContainer p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  color: #7c7c7c;
+  margin-bottom: 25px;
+}
+
+.input_box {
+  margin-bottom: 20px;
+}
+
+.modal_main {
+  display: flex;
+  padding-bottom: 0px;
+  width: 1036px;
+}
+
+.modal_col1 {
+  width: 300px;
+  background: #005fe5;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.modal_col2 {
+  width: calc(100% - 300px);
+  padding: 50px 40px 50px 60px;
+}
+
+.checkboxLabel {
+  width: max-content;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+  margin-bottom: 10px;
+  color: #243442;
+  display: block;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer select,
+.formContainer textarea {
+  padding: 8.5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 0px;
+  background: #fff;
+  width: 100%;
+}
+.css-1dimb5e-singleValue {
+  color: rgb(0, 0, 0) !important;
+  font-size: 14px !important;
+}
+.formContainer .checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.formContainer button {
+  color: #000;
+  border: none;
+  padding: 0px 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 0px 10px 0px 10px;
+  background: #00ff6b;
+  font-size: 24px;
+  font-weight: 700;
+  width: 218px;
+  height: 59px;
+}
+
+.formContainer button:hover {
+  background-color: #ce3847;
+  color: #fff;
+}
+
+.rowbox {
+  margin-bottom: 30px;
+}
+
+.rowbox.flex.justify-between input {
+  background: none !important;
+}
+
+.datetimeinput {
+  border-radius: 4px;
+  border: 1px solid #000;
+  margin-top: 5px;
+}
+
+.datetimeinput input {
+  padding: 8px;
+}
+
+/* .css-13cymwt-control {
+  border-color: #000 !important;
+  margin-top: 6px !important;
+  min-height: 43px !important;
+} */
+
+.css-1u9des2-indicatorSeparator {
+  background-color: #000 !important;
+}
+
+.css-1xc3v61-indicatorContainer {
+  color: #000 !important;
+}
+
+.demoActive {
+  color: #a9c25d;
+  height: 50%;
+}
+
+.demoInctive {
+  background-color: #416a59 !important;
+  height: 100%;
+}
+
+.modal_thank {
+  padding: 10px 40px 40px;
+  text-align: center;
+  /* display: none; */
+  width: 700px;
+}
+
+.modal_thank img {
+  display: inline-block;
+}
+
+.modal_thank h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58.09px;
+  width: 100%;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal_thank p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+  color: #000;
+  max-width: 587px;
+  margin: auto;
+}
+
+.mobileimg {
+  display: none;
+}
+
+@media (max-width: 840px) {
+  .hero_banner .bannerwrap {
+    width: 100%;
+    padding: 0px 20px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero_banner .bannerwrap .heroimage {
+    display: none;
+  }
+  .hero_banner .bannerwrap .content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1259px) {
+  .modal_main {
+    width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero_banner .bannerwrap .content h1 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .hero_banner .bannerwrap .content button {
+    font-size: 0.8rem;
+  }
+
+  .formContainer {
+    max-width: 100%;
+  }
+
+  .navbar {
+    display: none !important;
+  }
+
+  .formContainer h2 {
+    max-width: 350px;
+    margin-top: -40px;
+  }
+}
+
+.errorMessage {
+  color: red;
+  margin-bottom: -15px;
+  font-size: 12px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.errorMessage svg {
+  width: 16px;
+  margin-right: 6px;
+}
+
+.logoMenu h2 {
+  width: 25px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-new {
+  position: relative !important;
+}
+
+.active-new a {
+  color: #a9c25d !important;
+}
+
+.active-new:after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 30px !important;
+  background: #a9c25d !important;
+}
+
+@media (max-width: 1025) {
+  .modal_thank h2 {
+    font-size: 38px;
+    line-height: 48.09px;
+  }
+
+  .modal_main {
+    display: block;
+  }
+
+  .modal_main {
+    display: block;
+    padding-bottom: 0;
+    width: 1036px;
+  }
+
+  .formContainer h2 {
+    font-size: 38px;
+    line-height: 48.09px;
+  }
+
+  .Navbar_modal_main__4xKDz {
+    width: 800px;
+  }
+}
+
+@media (max-width: 991px) {
+  .modal_col1 {
+    display: none !important;
+  }
+  .mobileimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #005fe5;
+    padding-top: 20px;
+  }
+  .modal_main {
+    display: block;
+    padding-bottom: 0;
+  }
+  .mobileimg img {
+    width: auto;
+  }
+  .popup_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .formContainer h2 {
+    font-size: 24px !important;
+    line-height: 34px !important;
+    text-align: center;
+  }
+  .formContainer p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .modal_col2 {
+    width: 100% !important;
+    padding: 25px !important;
+  }
+  .formContainer h2 {
+    font-size: 38px !important;
+    line-height: 48px !important;
+  }
+  .input_box {
+    margin-bottom: 10px !important;
+  }
+  .formContainer {
+    height: 100%;
+  }
+  .modal_main {
+    display: flex !important;
+    padding-bottom: 0 !important;
+    height: 100% !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  .modal_thank {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    padding: 20px !important;
+  }
+  .modal_thank p {
+    margin: inherit !important;
+  }
+}
+@media (max-width: 767px) {
+  .formContainer {
+    max-width: 100%;
+  }
+  .formContainer h2 {
+    max-width: 100% !important;
+    margin-top: 0 !important;
+  }
+  .navbar {
+    display: none !important;
+  }
+  /* .hero_banner {
+  padding-left: 15px;
+  padding-right: 15px;
+}   */
+  .hero_img {
+    right: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .formContainer label {
+    font-size: 16px;
+  }
+}

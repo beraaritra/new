@@ -1,0 +1,64 @@
+.Whychoosesec {
+  width: 100%;
+  height: auto;
+  padding: 100px 15px 0;
+}
+.Whychoosesec .mainwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+}
+.Whychoosesec .mainwrapper .image {
+  width: 100%;
+  height: auto;
+  max-width: 50%;
+}
+.Whychoosesec .mainwrapper .image img {
+  width: 100%;
+}
+.Whychoosesec .mainwrapper .accordiansect {
+  width: 100%;
+  height: auto;
+  max-width: 50%;
+}
+.Whychoosesec .mainwrapper .accordiansect h1 {
+  font-size: 2.625rem;
+  line-height: 63px;
+  font-weight: 800;
+  color: #000;
+}
+.Whychoosesec .mainwrapper .accordiansect h1 span {
+  color: #0273fa;
+}
+.Whychoosesec .mainwrapper .accordiansect .accordionitem {
+  background: #eef5ff;
+  border-radius: 16px;
+}
+.Whychoosesec .mainwrapper .accordiansect .choose {
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .Whychoosesec .mainwrapper {
+    flex-direction: column;
+  }
+  .Whychoosesec .mainwrapper .image {
+    margin: 0px auto;
+  }
+  .Whychoosesec .mainwrapper .accordiansect {
+    max-width: 100%;
+  }
+  .Whychoosesec {
+    padding: 50px 15px 0;
+  }
+  .Whychoosesec .mainwrapper .accordiansect h1 {
+    font-size: 2rem;
+  }
+  .Whychoosesec .mainwrapper {
+    gap: 50px;
+  }
+  .Whychoosesec .mainwrapper .accordiansect .choose {
+    margin-top: 25px;
+  }
+}

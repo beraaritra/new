@@ -1,0 +1,148 @@
+.businesssec {
+  width: 100%;
+  height: auto;
+  padding: 100px 15px 0;
+  background-color: #fff;
+}
+.businesssec .heading {
+  width: 100%;
+  text-align: center;
+}
+.businesssec .heading h1 {
+  font-size: 2.625rem;
+  color: #000;
+  font-weight: 800;
+  line-height: 63px;
+}
+.businesssec .heading h1 span {
+  color: #0273fa;
+}
+.businesssec .heading p {
+  font-size: 1.375rem;
+  line-height: 32px;
+  color: #222;
+}
+.businesssec .boxwrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+.businesssec .box {
+  width: 100%;
+  max-width: 30%;
+  flex: 0 0 30%;
+  padding: 15px;
+  border: 1px solid #7a7a7a;
+  border-radius: 16px;
+  min-height: 570px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.businesssec .box .icon {
+  width: 48px;
+  height: 48px;
+}
+.businesssec .box .convert {
+  filter: invert(3);
+}
+.businesssec .box .content {
+  width: 100%;
+  margin-top: 30px;
+}
+.businesssec .box .content h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 28px;
+}
+.heightset {
+  min-height: 370px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.businesssec .box .content ul {
+  margin-top: 20px;
+}
+.businesssec .box .content ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+.businesssec .box .content ul li span {
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000;
+}
+.businesssec .box .content .buttonwrap {
+  width: 100%;
+  text-align: right;
+  margin-top: 50px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.businesssec .box .content .buttonwrap button {
+  border: 1px solid #7a7a7a;
+  background-color: transparent;
+  color: #0273fa;
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: 600;
+  padding: 15px 25px;
+  border-radius: 16px;
+}
+.businesssec .box:hover {
+  background-color: #0273fa;
+}
+.businesssec .box:hover .content h4 {
+  color: #fff;
+}
+.businesssec .box:hover .content ul li span {
+  color: #fff;
+}
+.businesssec .box:hover .content ul li img {
+  filter: brightness(2.5);
+}
+.businesssec .box:hover .content .buttonwrap button {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.businesssec .box:hover .icon img {
+  filter: brightness(2.5);
+}
+@media (max-width: 990px) {
+  .businesssec .box {
+    max-width: 45%;
+    flex: 0 0 45%;
+  }
+}
+@media (max-width: 768px) {
+  .businesssec {
+    padding: 50px 15px 0;
+  }
+
+  .businesssec .heading h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .businesssec .heading p br {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  .businesssec .box {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
