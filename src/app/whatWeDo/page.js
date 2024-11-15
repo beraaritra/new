@@ -1,8 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./WhatWeDo.module.css";
+import BookCall from "@/components/bookCall/BookCall";
 
 const WhatWeDo = () => {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   return (
     <>
       <section className={styles.herosection}>
@@ -18,12 +22,19 @@ const WhatWeDo = () => {
                 streamline financial operations, boosts accuracy, and help you
                 take informed decisions for your business.
               </p>
-              <div className={styles.hero_btn}>
-                <button className="book-call-btn">
-                  <img src="/call.svg" alt="logo" />
-                  Get Free Assessment
-                </button>
-              </div>
+              {modalIsOpen ? (<>
+                <BookCall
+                  modalIsOpen={modalIsOpen}
+                  setModalIsOpen={setModalIsOpen}
+                />
+              </>) : (<>
+                <div className={styles.hero_btn} onClick={() => setModalIsOpen(true)}>
+                  <button className="book-call-btn">
+                    <img src="/call.svg" alt="logo" />
+                    Get Free Assessment
+                  </button>
+                </div></>)}
+
             </div>
             <div className={styles.heroimage}>
               <img src="/whatwedo.svg" />
