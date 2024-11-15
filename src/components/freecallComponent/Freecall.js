@@ -265,7 +265,7 @@ export const Freecall = () => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
-      ></Modal>
+      >
 
         <img
           src="/delete_dismiss.svg"
@@ -466,6 +466,8 @@ export const Freecall = () => {
           })()}
 
         </div>
+
+        </Modal>
     </section>
   );
 };
