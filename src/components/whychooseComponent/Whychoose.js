@@ -25,6 +25,10 @@ export const Whychoose = () => {
   const handleItemClick = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  React.useEffect(() => {
+    if (openIndex === null) setOpenIndex(0);
+  }, [openIndex]);
+
   return (
     <section className={styles.Whychoosesec}>
       <div className="container mx-auto">

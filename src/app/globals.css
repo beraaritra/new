@@ -200,7 +200,6 @@ select:focus {
   inset: 50% auto auto 50% !important;
   padding: 0 !important;
   border-radius: 16px !important;
-  width: 820px;
 }
 
 .Header_formContainer__TY4kP input[type="text"],
@@ -1750,8 +1749,8 @@ select:focus {
     transform: inherit !important;
     margin-right: 0px !important;
     margin: 15px !important;
-    width: 90%;
-    inset: 5% auto auto 3% !important;
+    /* width: 90%;
+    inset: 5% auto auto 3% !important; */
   }
   .ContentPricing_pricing_main__wII3D .w-2\/4 {
     width: 100%;
@@ -1907,9 +1906,9 @@ select:focus {
   .top_row {
     margin: 15px auto;
   }
-  .ReactModal__Content.ReactModal__Content--after-open {
+  /* .ReactModal__Content.ReactModal__Content--after-open {
     inset: 5% auto auto 2.8% !important;
-  }
+  } */
 }
 @media (max-width: 500px) {
   .contact_row .contact_col1 p {
@@ -1925,9 +1924,9 @@ select:focus {
   .Navbar_formContainer__tYPlt h2 {
     max-width: 300px !important;
   }
-  .ReactModal__Content.ReactModal__Content--after-open {
+  /* .ReactModal__Content.ReactModal__Content--after-open {
     inset: 5% auto auto 2% !important;
-  }
+  } */
 }
 
 .disabled-button {

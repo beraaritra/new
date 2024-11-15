@@ -252,8 +252,8 @@ const Footer = () => {
           <div className={styles.heading}>
             <h1>Get in touch</h1>
             <p>
-              Want to get in touch? We'd love to hear from you. Here's how you
-              can reach us
+              Want to get in touch? We&apos;d love to hear from you. Here&apos;s
+              how you can reach us
             </p>
           </div>
           <div className={styles.addresswrap}>

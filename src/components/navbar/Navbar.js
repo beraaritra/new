@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"; // This is a client component 👈🏽
 import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
@@ -22,6 +23,10 @@ import validateName from "@/common/validateName";
 import validateEmail from "@/common/validateEmail";
 import validatePhone from "@/common/validatePhone";
 import Script from "next/script";
+
+import { BookingCreationContent } from "../bookingCreationContent/BookingCreationContent";
+import { BookingConfirmContent } from "../bookingConfirmContent/BookingConfirmContent";
+import { BookingReviewContent } from "../bookingReviewContent/BookingReviewContent";
 
 const customStyles = {
   content: {
@@ -209,7 +214,7 @@ const Navbar = () => {
       console.log(formData);
 
       console.log(process.env.API_BASE_URL);
-      const response = await axios.post(`/api/v1/lead/bookcall`, formData);
+      // const response = await axios.post(`/api/v1/lead/bookcall`, formData);
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
@@ -227,9 +232,9 @@ const Navbar = () => {
       });
       setSelectedOption(null);
       // Redirect to the "Thank you" page
-      setModalView("thankYou"); // Switch to thank you view
+      setModalView("booking creation"); // Switch to thank you view
       setIsSubmitting(false);
-      console.log("API Response:", response.data);
+      // console.log("API Response:", response.data);
     } catch (error) {
       // Handle API request error (e.g., show an error message)
       console.error("API Request Error:", error);
@@ -250,6 +255,9 @@ const Navbar = () => {
     // subtitle.style.color = '#f00';
   }
 
+  const [isReschedule, setIsReschedule] = useState(false);
+  const [bookingDataResponse, setBookingDataResponse] = useState({})
+
   function closeModal() {
     setIsOpen(false);
     setFormData({
@@ -259,10 +267,36 @@ const Navbar = () => {
       phone: "",
     });
     setSelectedOption(null);
+    setBookingData({})
+    setIsReschedule(false)
+    setBookingDataResponse({})
   }
 
   console.log("activeSection", activeSection);
+  const [activeRoute, setActiveRoute] = useState("/");
 
+  const handleItemClickNavTab = (route) => {
+    setActiveRoute(route);
+  };
+
+  const [bookingData, setBookingData] = useState({
+    eventId: null,
+    timeZone: "",
+    time_zone: "",
+    title: "",
+    scheduleId: null,
+    userId: null,
+    company_type: "in_house",
+    startTime: null,
+    endTime: null,
+    responses: {},
+    teamId: null,
+    student_name: "",
+    student_email: "",
+    selectedDate: new Date().toISOString(),
+    selectedSlot: null,
+    organizationId: 5
+  });
   return (
     <>
       <header className={styles.header}>
@@ -281,9 +315,8 @@ const Navbar = () => {
             <div className={styles.menubar}>
               <div
                 // className={styles.menu}
-                className={`${styles.menu} ${
-                  isOpenMobileScreen ? styles.openmobilemenu : ""
-                }`}
+                className={`${styles.menu} ${isOpenMobileScreen ? styles.openmobilemenu : ""
+                  }`}
               >
                 <div
                   className={styles.cross}
@@ -293,24 +326,68 @@ const Navbar = () => {
                 </div>
                 <ul>
                   <li>
-                    <Link href="/" onClick={() => handleItemClick("/")}>
+                    <Link
+                      href="/"
+                      onClick={() => handleItemClickNavTab("/")}
+                      className={activeRoute === "/" ? styles.activeRoute : ""}
+                    >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="whatWeDo">What We Do</Link>
+                    <Link
+                      href="/whatWeDo"
+                      onClick={() => handleItemClickNavTab("/whatWeDo")}
+                      className={
+                        activeRoute === "/whatWeDo" ? styles.activeRoute : ""
+                      }
+                    >
+                      What We Do
+                    </Link>
                   </li>
                   <li>
-                    <Link href="whoWeAre">Who We Are</Link>
+                    <Link
+                      href="/whoWeAre"
+                      onClick={() => handleItemClickNavTab("/whoWeAre")}
+                      className={
+                        activeRoute === "/whoWeAre" ? styles.activeRoute : ""
+                      }
+                    >
+                      Who We Are
+                    </Link>
                   </li>
                   <li>
-                    <Link href="">Careers</Link>
+                    <Link
+                      href="/career"
+                      onClick={() => handleItemClickNavTab("/career")}
+                      className={
+                        activeRoute === "/career" ? styles.activeRoute : ""
+                      }
+                    >
+                      Careers
+                    </Link>
                   </li>
                   <li>
-                    <Link href="">Contact Us</Link>
+                    <Link
+                      href="/contactUs"
+                      onClick={() => handleItemClickNavTab("/contactUs")}
+                      className={
+                        activeRoute === "/contactUs" ? styles.activeRoute : ""
+                      }
+                    >
+                      Contact Us
+                    </Link>
                   </li>
                   <li>
-                    <Link href="">FAQs</Link>
+                    <Link
+                      href="/faq"
+                      onClick={() => handleItemClickNavTab("/faq")}
+                      className={
+                        activeRoute === "/faq" ? styles.activeRoute : ""
+                      }
+                    >
+                      FAQs
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -332,130 +409,36 @@ const Navbar = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className={styles.close}>
-          <img
-            src="/delete_dismiss.svg"
-            alt="close"
-            width="18px"
-            height="18px"
-            className={styles.closeicon}
-            onClick={closeModal}
-          />
-        </div>
+            <img
+              src="/delete_dismiss.svg"
+              alt="close"
+              width="18px"
+              height="18px"
+              className={styles.closeicon}
+              onClick={closeModal}
+            />
+          
 
-        <div className={styles.formContainer}>
-          {modalView === "form" ? (
-            <div className={styles.modal_main}>
-              <div className={styles.modalimg}>
-                <img src="/modal1.svg" alt="form-image" />
-              </div>
-              <div className={styles.modalformwrap}>
-                <h2>Book a call</h2>
-                <div className={styles.formwrap}>
-                  <form onSubmit={handleSubmit}>
-                    <div className={styles.input_box}>
-                      <label>Name</label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="John Doe"
-                      />
-                      {validationErrors.name && (
-                        <div className={styles.errorMessage}>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
-                            />
-                          </svg>
-                          {validationErrors.name}
-                        </div>
-                      )}
-                    </div>
-                    <div className={styles.input_box}>
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="jhondoe@example.com"
-                      />
-                      {validationErrors.email && (
-                        <div className={styles.errorMessage}>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
-                            />
-                          </svg>
-                          {validationErrors.email}
-                        </div>
-                      )}
-                    </div>
-                    <div className={styles.fromwrapper}>
+          <div className={styles.formContainer}>
+            {/* {modalView === "form" ? (
+              <div className={styles.modal_main}>
+                <div className={styles.modalimg}>
+                  <img src="/modal1.svg" alt="form-image" />
+                </div>
+                <div className={styles.modalformwrap}>
+                  <h2>Book a call</h2>
+                  <div className={styles.formwrap}>
+                    <form onSubmit={handleSubmit}>
                       <div className={styles.input_box}>
-                        <label>Country Code</label>
-                        <Select
-                          defaultValue={selectedOption}
-                          onChange={handleCountryCodeChange}
-                          options={countries}
-                        />
-                        {validationErrors.countryCode && (
-                          <div className={styles.errorMessage}>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-6"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
-                              />
-                            </svg>
-                            {validationErrors.countryCode}
-                          </div>
-                        )}
-                      </div>
-                      <div className={styles.input_box}>
-                        <label>Phone</label>
+                        <label>Name</label>
                         <input
                           type="text"
-                          name="phone"
-                          value={formData.phone}
+                          name="name"
+                          value={formData.name}
                           onChange={handleChange}
-                          placeholder="Phone No"
-                          minLength="6"
-                          maxLength="15"
-                          onKeyPress={(event) => {
-                            if (!/[0-9]/.test(event.key)) {
-                              event.preventDefault();
-                            }
-                          }}
+                          placeholder="John Doe"
                         />
-                        {validationErrors.phone && (
+                        {validationErrors.name && (
                           <div className={styles.errorMessage}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -471,36 +454,472 @@ const Navbar = () => {
                                 d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
                               />
                             </svg>
-                            {validationErrors.phone}
+                            {validationErrors.name}
                           </div>
                         )}
                       </div>
-                    </div>
-                    <div className={styles.popup_btn}>
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className={isSubmitting ? "disabled-button" : ""}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </form>
+                      <div className={styles.input_box}>
+                        <label>Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="jhondoe@example.com"
+                        />
+                        {validationErrors.email && (
+                          <div className={styles.errorMessage}>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                              />
+                            </svg>
+                            {validationErrors.email}
+                          </div>
+                        )}
+                      </div>
+                      <div className={styles.fromwrapper}>
+                        <div className={styles.input_box}>
+                          <label>Country Code</label>
+                          <Select
+                            defaultValue={selectedOption}
+                            onChange={handleCountryCodeChange}
+                            options={countries}
+                          />
+                          {validationErrors.countryCode && (
+                            <div className={styles.errorMessage}>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                                />
+                              </svg>
+                              {validationErrors.countryCode}
+                            </div>
+                          )}
+                        </div>
+                        <div className={styles.input_box}>
+                          <label>Phone</label>
+                          <input
+                            type="text"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Phone No"
+                            minLength="6"
+                            maxLength="15"
+                            onKeyPress={(event) => {
+                              if (!/[0-9]/.test(event.key)) {
+                                event.preventDefault();
+                              }
+                            }}
+                          />
+                          {validationErrors.phone && (
+                            <div className={styles.errorMessage}>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                                />
+                              </svg>
+                              {validationErrors.phone}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className={styles.popup_btn}>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className={isSubmitting ? "disabled-button" : ""}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            // Thank you content
-            <div className={styles.modal_thank}>
-              <img src="/thanks.png" alt="Thank you" />
-              <h2>Thank You!</h2>
-              <p>
-                Thank you for reaching out, Our team will get back to you in 24
-                hours
-              </p>
-            </div>
-          )}
+            ) : (
+              // Thank you content
+              <div className={styles.modal_thank}>
+                <img src="/thanks.png" alt="Thank you" />
+                <h2>Thank You!</h2>
+                <p>
+                  Thank you for reaching out, Our team will get back to you in
+                  24 hours
+                </p>
+              </div>
+            )}
+          </div>
         </div>
+        <div className={styles.calendermodal}>
+          <div className={styles.close}>
+            <img
+              src="/delete_dismiss.svg"
+              alt="close"
+              width="18px"
+              height="18px"
+              className={styles.closeicon}
+              onClick={closeModal}
+            />
+          </div>
+
+          <div className={styles.formContainer}>
+            {modalView === "form" ? (
+              <div className={styles.modal_main}>
+                <div className={styles.mainwrapper}>
+                  <div className={styles.menuside}>
+                    <div className={styles.title}>
+                      <h2>Acciofinance Team</h2>
+                      <h4>30 Min Meeting</h4>
+                      <ul>
+                        <li>
+                          <img src="/clock.svg " />
+                          30 mins
+                        </li>
+                        <li>
+                          <img src="/video.svg " />
+                          Cal Video
+                        </li>
+                        <li>
+                          <img src="/web.svg " />
+                          <select>
+                            <option>Asia/Kolkata</option>
+                            <option>Asia/Kolkata</option>
+                            <option>Asia/Kolkata</option>
+                          </select>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className={styles.image}>
+                      <img src="/calendermodal.svg" />
+                    </div>
+                  </div>
+                  <div className={styles.calenderbox}></div>
+                  <div className={styles.timezone}>
+                    <div className={styles.hourwrap}>
+                      <span>Thu 04</span>
+                      <div className={styles.buttonwrap}>
+                        <button type="button" className={styles.active}>
+                          12h
+                        </button>
+                        <button type="button">24h</button>
+                      </div>
+                    </div>
+                    <div className={styles.timelist}>
+                      <ul>
+                        <li>
+                          <input type="checkbox" />
+                          <label>9:00am</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label>10:00am</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label>11:00am</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label>12:00pm</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label>13:00pm</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label>14:00pm</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label>15:00pm</label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className={styles.button_wrap}>
+                      <button type="button" className={styles.transparent}>
+                        Back
+                      </button>
+                      <button type="button">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              // Thank you content
+              <div className={styles.modal_thank}></div>
+            )}
+          </div>
+        </div>
+        <div className={styles.subjectmodal}>
+          <div className={styles.close}>
+            <img
+              src="/delete_dismiss.svg"
+              alt="close"
+              width="18px"
+              height="18px"
+              className={styles.closeicon}
+              onClick={closeModal}
+            />
+          </div>
+
+          <div className={styles.formContainer}>
+            {modalView === "form" ? (
+              <div className={styles.modal_main}>
+                <div className={styles.mainwrapper}>
+                  <div className={styles.menuside}>
+                    <div className={styles.title}>
+                      <h2>Acciofinance Team</h2>
+                      <h4>30 Min Meeting</h4>
+                      <ul>
+                        <li>
+                          <img src="/clock.svg " />
+                          30 mins
+                        </li>
+                        <li>
+                          <img src="/video.svg " />
+                          Cal Video
+                        </li>
+                        <li>
+                          <img src="/web.svg " />
+                          <select>
+                            <option>Asia/Kolkata</option>
+                            <option>Asia/Kolkata</option>
+                            <option>Asia/Kolkata</option>
+                          </select>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className={styles.image}>
+                      <img src="/calendermodal.svg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              // Thank you content
+              <div className={styles.modal_thank}></div>
+            )} */}
+
+
+            {(() => {
+              switch (modalView) {
+                case "form":
+                  return (
+                    // Lead form content
+                    <div className={styles.modal_main}>
+                      <div className={styles.modal_col1}>
+                        <img src="/modalimg.png" alt="form-image" />
+                      </div>
+                      <div className={styles.modal_col2}>
+                        <h2>Book a call</h2>
+                        <p>How we can help you</p>
+                        <form onSubmit={handleSubmit}>
+                          <div className={styles.input_box}>
+                            <label>Name</label>
+                            <input
+                              type="text"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                              placeholder="Jhon Doe"
+                            />
+                            {validationErrors.name && (
+                              <div className={styles.errorMessage}>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                                  />
+                                </svg>
+                                {validationErrors.name}
+                              </div>
+                            )}
+                          </div>
+                          <div className={styles.input_box}>
+                            <label>Email</label>
+                            <input
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              placeholder="jhondoe@example.com"
+                            />
+                            {validationErrors.email && (
+                              <div className={styles.errorMessage}>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                                  />
+                                </svg>
+                                {validationErrors.email}
+                              </div>
+                            )}
+                          </div>
+                          <div className="rowbox flex justify-between">
+                            <div className="w-2/3 pl-3 pr-3">
+                              <label>Country Code</label>
+                              <Select
+                                defaultValue={selectedOption}
+                                onChange={handleCountryCodeChange}
+                                options={countries}
+                              />
+                              {validationErrors.countryCode && (
+                                <div className={styles.errorMessage}>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                                    />
+                                  </svg>
+                                  {validationErrors.countryCode}
+                                </div>
+                              )}
+                            </div>
+                            <div className="w-2/3 pl-3 pr-3">
+                              <label>Phone</label>
+                              <input
+                                type="text"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="Phone No"
+                                minLength="6"
+                                maxLength="15"
+                                onKeyPress={(event) => {
+                                  if (!/[0-9]/.test(event.key)) {
+                                    event.preventDefault();
+                                  }
+                                }}
+                              />
+                              {validationErrors.phone && (
+                                <div className={styles.errorMessage}>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+                                    />
+                                  </svg>
+                                  {validationErrors.phone}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          <div className={styles.popup_btn}>
+                            <button
+                              type="submit"
+                              disabled={isSubmitting}
+                              className={isSubmitting ? "disabled-button" : ""}
+                            >
+                              Submit
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                      <div className={styles.mobileimg}>
+                        <img src="/modalimg.png" alt="form-image" />
+                      </div>
+                    </div>
+                  );
+
+                  case "booking creation":
+                    return (
+                      // Booking creation content
+                      <BookingCreationContent setModalView={setModalView} bookingData={bookingData}
+                        setBookingData={setBookingData} />
+                    );
+    
+                  case "booking confirm":
+                    return (
+                      // Booking confirmation content
+                      <BookingConfirmContent setModalView={setModalView} bookingData={bookingData} setBookingData={setBookingData} isReschedule={isReschedule} setIsReschedule={setIsReschedule} bookingDataResponse={bookingDataResponse} setBookingDataResponse={setBookingDataResponse}/>
+                    );
+    
+                  case "booking review":
+                    return (
+                      // Booking confirmation content
+                      <BookingReviewContent setModalView={setModalView} bookingData={bookingData} setBookingData={setBookingData} isReschedule={isReschedule} setIsReschedule={setIsReschedule} bookingDataResponse={bookingDataResponse} setBookingDataResponse={setBookingDataResponse} />
+                    );
+    
+                  case "thank you":
+                    return (
+                      // Thank you content
+                      <div className={styles.modal_thank}>
+                        <img src="/thanks.png" alt="Thank you" />
+                        <h2>Thank You!</h2>
+                        <p>
+                          Thank you for reaching out, our team will get back to you within 24 hours.
+                        </p>
+                      </div>
+                    );
+    
+                  default:
+                    return null;
+                }
+              })()}
+    
+          </div>
 
         <Script id="data-layer-script" strategy="afterInteractive">
           {`

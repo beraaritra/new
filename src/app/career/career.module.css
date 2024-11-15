@@ -1,0 +1,406 @@
+.herosection {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.herosection .bannerwrap {
+  width: 100%;
+  padding: 0px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.herosection .bannerwrap .content {
+  width: 100%;
+  max-width: 60%;
+  height: auto;
+}
+.herosection .bannerwrap .content h1 {
+  font-size: 3rem;
+  line-height: 58px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+.herosection .bannerwrap .content h1 span {
+  color: #0273fa;
+}
+.herosection .bannerwrap .content p {
+  font-size: 1.125rem;
+  color: #000;
+  margin-top: 30px;
+  line-height: 29px;
+}
+.herosection .bannerwrap .content .hero_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: #0273fa;
+  border-radius: 16px;
+  margin-top: 50px;
+  transition: 0.2s;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.herosection .bannerwrap .content .hero_btn button:hover {
+  background-color: #004ca6;
+}
+
+.Whychoosesec {
+  width: 100%;
+  height: auto;
+  padding: 100px 15px 0;
+}
+.Whychoosesec .mainwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+}
+.Whychoosesec .mainwrapper .image {
+  width: 100%;
+  height: auto;
+  max-width: 40%;
+}
+.Whychoosesec .mainwrapper .image img {
+  width: 100%;
+}
+.Whychoosesec .mainwrapper .accordiansect {
+  width: 100%;
+  height: auto;
+  max-width: 60%;
+}
+.Whychoosesec .mainwrapper .accordiansect h1 {
+  font-size: 2.625rem;
+  line-height: 63px;
+  font-weight: 800;
+  color: #000;
+}
+.Whychoosesec .mainwrapper .accordiansect h1 span {
+  color: #0273fa;
+}
+.Whychoosesec .mainwrapper .accordiansect .accordionitem {
+  background: #eef5ff;
+  border-radius: 16px;
+}
+.Whychoosesec .mainwrapper .accordiansect .choose {
+  margin-top: 50px;
+}
+.joiningformsec {
+  width: 100%;
+  padding: 100px 15px 0;
+  height: auto;
+}
+.joiningformsec .heading {
+  width: 100%;
+  text-align: center;
+}
+.joiningformsec .heading h1 {
+  font-size: 2.625rem;
+  color: #000;
+  font-weight: 800;
+  line-height: 56px;
+}
+.joiningformsec .heading h1 span {
+  color: #0273fa;
+}
+.joiningformsec .mainwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.joiningformsec .mainwrapper .joinwrap {
+  width: 100%;
+  max-width: 70%;
+  background: #eaf3ff;
+  padding: 50px 30px;
+  border-radius: 16px;
+}
+.joiningformsec .mainwrapper .joinwrap .heading {
+  text-align: left;
+  width: 100%;
+}
+.joiningformsec .mainwrapper .joinwrap .heading h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 48px;
+  color: #263238;
+}
+.joiningformsec .mainwrapper .joinwrap .heading p {
+  margin-top: 10px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 27px;
+  color: #263238;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form {
+  width: 100%;
+  height: auto;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form label {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #263238;
+  display: block;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form input {
+  height: 51px;
+  width: 100%;
+  border: 1px solid #0273fa85;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form select {
+  height: 51px;
+  width: 100%;
+  border: 1px solid #0273fa85;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form textarea {
+  height: 92px;
+  width: 100%;
+  border: 1px solid #0273fa85;
+  background-color: #fff;
+  border-radius: 4px;
+  resize: none;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form .phonewrap {
+  height: 51px;
+  width: 100%;
+  border: 1px solid #0273fa85;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.joiningformsec
+  .mainwrapper
+  .joinwrap
+  .formwrapper
+  .wraping
+  .form
+  .phonewrap
+  input {
+  border: 0;
+  height: 51px;
+  border-radius: 0;
+  padding: 0 10px;
+}
+.joiningformsec
+  .mainwrapper
+  .joinwrap
+  .formwrapper
+  .wraping
+  .form
+  .phonewrap::before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #cecece;
+  position: absolute;
+  left: 120px;
+}
+.joiningformsec
+  .mainwrapper
+  .joinwrap
+  .formwrapper
+  .wraping
+  .form
+  .phonewrap
+  select {
+  width: 150px;
+  border: 0;
+  height: 51px;
+  border-radius: 0;
+}
+.joiningformsec
+  .mainwrapper
+  .joinwrap
+  .formwrapper
+  .wraping
+  .form
+  .uploadresume {
+  margin-top: 20px;
+  width: 100%;
+  height: 152px;
+  background-color: transparent;
+  border: 1px dashed #cecece;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .wraping .form .resumewrap {
+  width: 100%;
+  max-width: 160px;
+  position: relative;
+}
+.joiningformsec
+  .mainwrapper
+  .joinwrap
+  .formwrapper
+  .wraping
+  .form
+  .resumewrap
+  .uploadbutton {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid #0273fa;
+  height: 47px;
+  width: 160px;
+  color: #0273fa;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.uploadinput {
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+}
+.joiningformsec
+  .mainwrapper
+  .joinwrap
+  .formwrapper
+  .wraping
+  .form
+  .uploadresume {
+  color: #868686;
+  margin-top: 10px;
+  font-size: 0.875rem;
+  line-height: 28px;
+  font-weight: 400;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .buttonwrap {
+  width: 100%;
+  margin-top: 50px;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .buttonwrap button {
+  width: 100%;
+  background-color: #0273fa;
+  border-radius: 10px;
+  height: 55px;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 36px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.joiningformsec .mainwrapper .joinwrap .formwrapper .buttonwrap button:hover {
+  background-color: #004ca6;
+}
+
+@media (max-width: 1024px) {
+  .joiningformsec .mainwrapper {
+    flex-direction: column;
+  }
+  .joiningformsec .mainwrapper .joinwrap {
+    max-width: 100%;
+  }
+  .joiningformsec .mainwrapper .image {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .herosection .bannerwrap {
+    width: 100%;
+    padding: 0px 20px 0;
+    flex-direction: column;
+  }
+  .herosection .bannerwrap .heroimage {
+    display: none;
+  }
+  .herosection .bannerwrap .content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .herosection .bannerwrap .content h1 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .herosection .bannerwrap .content button {
+    font-size: 0.8rem;
+  }
+  .Whychoosesec .mainwrapper {
+    flex-direction: column;
+  }
+  .Whychoosesec .mainwrapper .image {
+    margin: 0px auto;
+  }
+  .Whychoosesec .mainwrapper .accordiansect {
+    max-width: 100%;
+  }
+  .Whychoosesec {
+    padding: 50px 15px 0;
+  }
+  .Whychoosesec .mainwrapper .accordiansect h1 {
+    font-size: 2rem;
+  }
+  .Whychoosesec .mainwrapper {
+    gap: 50px;
+  }
+  .Whychoosesec .mainwrapper .accordiansect .choose {
+    margin-top: 25px;
+  }
+  .joiningformsec .mainwrapper .joinwrap .formwrapper .wraping {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .joiningformsec
+    .mainwrapper
+    .joinwrap
+    .formwrapper
+    .wraping
+    .form
+    .uploadresume {
+    padding: 15px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .joiningformsec
+    .mainwrapper
+    .joinwrap
+    .formwrapper
+    .wraping
+    .form
+    .phonewrap::before {
+    content: "";
+    width: 1px;
+    height: 30px;
+    background-color: #cecece;
+    position: absolute;
+    left: 110px;
+  }
+}

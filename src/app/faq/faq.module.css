@@ -1,0 +1,105 @@
+.herosection {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.herosection .bannerwrap {
+  width: 100%;
+  padding: 0px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.herosection .bannerwrap .content {
+  width: 100%;
+  max-width: 55%;
+  height: auto;
+}
+.herosection .bannerwrap .content h1 {
+  font-size: 3rem;
+  line-height: 58px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+.herosection .bannerwrap .content h1 span {
+  color: #0273fa;
+}
+.herosection .bannerwrap .content p {
+  font-size: 1.125rem;
+  color: #000;
+  margin-top: 30px;
+  line-height: 29px;
+}
+.herosection .bannerwrap .content .hero_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+  padding: 15px 30px;
+  background-color: #0273fa;
+  border-radius: 16px;
+  margin-top: 50px;
+  transition: 0.2s;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.herosection .bannerwrap .content .hero_btn button:hover {
+  background-color: #004ca6;
+}
+
+.faqsec {
+  padding: 100px 15px 0;
+  text-align: center;
+}
+.faqsec .accordiansect .heading {
+  width: 100%;
+  text-align: center;
+}
+.faqsec .accordiansect .heading h1 {
+  font-size: 2.625rem;
+  line-height: 63px;
+  font-weight: 800;
+  color: #000;
+}
+.faqsec .accordiansect .heading h1 span {
+  color: #0273fa;
+}
+.faqsec .accordiansect .choose {
+  width: 100%;
+  margin-top: 50px;
+}
+
+@media (max-width: 840px) {
+  .herosection .bannerwrap {
+    width: 100%;
+    padding: 0px 20px 0;
+    flex-direction: column;
+  }
+  .herosection .bannerwrap .heroimage {
+    display: none;
+  }
+  .herosection .bannerwrap .content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .faqsec {
+    padding: 50px 15px;
+  }
+  .faqsec .accordiansect .heading h1 {
+    font-size: 2rem;
+    line-height: 50px;
+    font-weight: 800;
+    color: #000;
+  }
+}
+@media (max-width: 768px) {
+  .herosection .bannerwrap .content h1 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .herosection .bannerwrap .content button {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,98 @@
+.leadershipsec {
+  width: 100%;
+  padding: 100px 15px 0;
+  background-color: #fff;
+}
+.leadershipsec .heading {
+  width: 100%;
+  text-align: center;
+}
+.leadershipsec .heading h1 {
+  font-size: 2.625rem;
+  line-height: 56px;
+  color: #000;
+  font-weight: 800;
+}
+.leadershipsec .heading h1 span {
+  color: #0273fa;
+}
+.leadershipsec .listwrap {
+  width: 100%;
+  margin-top: 50px;
+}
+.leadershipsec .listwrap .listwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  border: 1px solid #0273fa;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.leadershipsec .listwrap .listwrapper .imagewrap {
+  width: 100%;
+  max-width: 20%;
+  height: auto;
+}
+.leadershipsec .listwrap .listwrapper .imagewrap .image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  border: 4px solid #0273fa;
+}
+.leadershipsec .listwrap .listwrapper .imagewrap p {
+  font-size: 1.375rem;
+  line-height: 33px;
+  font-weight: 700;
+  color: #0273fa;
+}
+.leadershipsec .listwrap .listwrapper .imagewrap span {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.leadershipsec .listwrap .listwrapper .contentwrap {
+  width: 100%;
+  max-width: 80%;
+}
+.leadershipsec .listwrap .listwrapper .contentwrap p {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 15px;
+}
+.leadershipsec .listwrap .listwrapper:hover {
+  background-color: #0273fa;
+}
+.leadershipsec .listwrap .listwrapper:hover p {
+  color: #fff;
+}
+.leadershipsec .listwrap .listwrapper:hover span {
+  color: #fff;
+}
+.leadershipsec .listwrap .listwrapper:hover .image {
+  border: 4px solid #fff;
+}
+@media (max-width: 840px) {
+  .leadershipsec .listwrap .listwrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .leadershipsec .listwrap .listwrapper .imagewrap {
+    max-width: 100%;
+    text-align: center;
+  }
+  .leadershipsec .listwrap .listwrapper .imagewrap .image {
+    margin: 0px auto;
+  }
+  .leadershipsec .listwrap .listwrapper .contentwrap {
+    max-width: 100%;
+    text-align: center;
+  }
+}

@@ -137,7 +137,85 @@
   font-weight: 400;
   color: #000;
 }
+.missionsec {
+  width: 100%;
+  padding: 100px 15px 0;
+}
+.missionsec .heading {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.missionsec .heading h2 {
+  line-height: 56px;
+  color: #000;
+  font-weight: 800;
+  font-size: 2.625rem;
+}
+.missionsec .heading h2 span {
+  color: #0273fa;
+}
+.missionsec .missionwrapper {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.missionsec .missionwrapper .mission {
+  width: 100%;
+  max-width: 30%;
+  min-height: 230px;
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: #eaf3ff;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+.missionsec .missionwrapper .mission .content {
+  margin-top: 30px;
+  width: 100%;
+}
+.missionsec .missionwrapper .mission .icon .invert {
+  filter: invert(1);
+}
+.missionsec .missionwrapper .mission .content h4 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000;
+}
+.missionsec .missionwrapper .mission .content p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000;
+}
+.missionsec .missionwrapper .mission:hover {
+  background-color: #0273fa;
+}
+.missionsec .missionwrapper .mission:hover h4 {
+  color: #fff;
+}
+.missionsec .missionwrapper .mission:hover p {
+  color: #fff;
+}
+.missionsec .missionwrapper .mission:hover img {
+  filter: brightness(3.5);
+}
+.missionsec .missionwrapper .mission:hover .invert {
+  filter: brightness(3.5);
+}
 
+@media (max-width: 1024px) {
+  .missionsec .missionwrapper .mission {
+    width: 100%;
+    max-width: 40%;
+    flex: 0 0 40%;
+  }
+}
 @media (max-width: 840px) {
   .herosection .bannerwrap {
     width: 100%;
@@ -188,5 +266,12 @@
   }
   .aboutsection .mainwrap {
     padding: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .missionsec .missionwrapper .mission {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
   }
 }

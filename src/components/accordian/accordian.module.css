@@ -95,12 +95,13 @@
 
 .accordioncontenttext {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
   line-height: 26px;
   padding: 15px;
   background: #0273fa;
   border-radius: 0 0 16px 16px;
+  text-align: left;
 }
 @media (max-width: 768px) {
   .accordiontitletext {

@@ -44,6 +44,9 @@
 .navbar .menu ul li a:hover {
   color: #0273fa;
 }
+.navbar .menu ul li a.activeRoute {
+  color: #0273fa !important;
+}
 
 .navbar .menubar .callbutton button {
   display: flex;
@@ -280,6 +283,9 @@
 } */
 
 /* Modal */
+.allmodal {
+  width: 820px;
+}
 .close {
   width: 100%;
   height: auto;
@@ -409,6 +415,281 @@
   border-radius: 10px;
 }
 
+/* Calender Modal */
+.calendermodal {
+  width: 1109px;
+}
+.calendermodal .mainwrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.calendermodal .mainwrapper .menuside {
+  width: 100%;
+  max-width: 25%;
+}
+.calendermodal .mainwrapper .menuside .title h2 {
+  font-size: 1.5rem;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000;
+}
+.calendermodal .mainwrapper .menuside .title h4 {
+  font-size: 1.25rem;
+  line-height: 30px;
+  font-weight: 600;
+  color: #000;
+}
+.calendermodal .mainwrapper .menuside .title ul {
+  margin-top: 20px;
+}
+.calendermodal .mainwrapper .menuside .title ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 15px;
+}
+.calendermodal .mainwrapper .menuside .title ul li select {
+  padding: 0 35px 0 0;
+  border: 0;
+}
+.calendermodal .mainwrapper .calenderbox {
+  width: 100%;
+  max-width: 50%;
+  min-height: 515px;
+  background-color: #dbecff;
+  border-radius: 20px;
+}
+.calendermodal .mainwrapper .timezone {
+  width: 100%;
+  max-width: 25%;
+  height: auto;
+}
+.calendermodal .mainwrapper .timezone .hourwrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calendermodal .mainwrapper .timezone .hourwrap span {
+  color: #727272;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.calendermodal .mainwrapper .timezone .hourwrap .buttonwrap {
+  width: 120px;
+  padding: 5px;
+  border: 1px solid #c7c7c7;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.calendermodal .mainwrapper .timezone .hourwrap .buttonwrap button {
+  background-color: transparent;
+  border: 0;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #727272;
+  width: 60px;
+  border-radius: 4px;
+}
+.calendermodal .mainwrapper .timezone .hourwrap .buttonwrap button.active {
+  background-color: #d9d9d9;
+}
+.calendermodal .mainwrapper .timezone .timelist {
+  width: 100%;
+  height: auto;
+}
+.calendermodal .mainwrapper .timezone .timelist ul {
+  margin-top: 20px;
+  height: 400px;
+  position: relative;
+  overflow-y: auto;
+}
+.calendermodal .mainwrapper .timezone .timelist ul li {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendermodal .mainwrapper .timezone .timelist ul li input[type="checkbox"] {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #bfbfbf;
+  height: 37px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.calendermodal .mainwrapper .timezone .timelist ul li label {
+  position: absolute;
+  z-index: 2;
+}
+.calendermodal .mainwrapper .timezone .button_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+}
+.calendermodal .mainwrapper .timezone .button_wrap button {
+  background: #0273fa;
+  color: #fff;
+  padding: 16px 47px;
+  font-size: 1.375rem;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.calendermodal .mainwrapper .timezone .button_wrap button.transparent {
+  padding: 16px;
+  background-color: transparent;
+  color: #343434;
+}
+
+/* Type subject Modal */
+
+.subjectmodal {
+  width: 820px;
+}
+.subjectmodal .mainwrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.subjectmodal .mainwrapper .menuside {
+  width: 100%;
+  max-width: 25%;
+}
+.subjectmodal .mainwrapper .menuside .title h2 {
+  font-size: 1.5rem;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000;
+}
+.subjectmodal .mainwrapper .menuside .title h4 {
+  font-size: 1.25rem;
+  line-height: 30px;
+  font-weight: 600;
+  color: #000;
+}
+.subjectmodal .mainwrapper .menuside .title ul {
+  margin-top: 20px;
+}
+.subjectmodal .mainwrapper .menuside .title ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 15px;
+}
+.subjectmodal .mainwrapper .menuside .title ul li select {
+  padding: 0 35px 0 0;
+  border: 0;
+}
+
+@media (max-width: 1130px) {
+  .calendermodal {
+    width: 1000px;
+  }
+}
+@media (max-width: 1024px) {
+  .calendermodal {
+    width: 900px;
+  }
+}
+
+@media (max-width: 991px) {
+  .allmodal {
+    width: 100%;
+  }
+  .calendermodal {
+    width: 100%;
+  }
+  .calendermodal .mainwrapper {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .calendermodal .mainwrapper .menuside {
+    max-width: 100%;
+  }
+  .calendermodal .mainwrapper .menuside .title {
+    text-align: center;
+  }
+  .calendermodal .mainwrapper .menuside ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .calendermodal .mainwrapper .menuside .image {
+    display: none;
+  }
+
+  .subjectmodal .mainwrapper {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subjectmodal .mainwrapper .menuside {
+    max-width: 100%;
+  }
+  .subjectmodal .mainwrapper .menuside .title {
+    text-align: center;
+  }
+  .subjectmodal .mainwrapper .menuside ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .subjectmodal .mainwrapper .menuside .image {
+    display: none;
+  }
+
+  .calendermodal .mainwrapper .calenderbox {
+    max-width: 100%;
+    min-height: 300px;
+  }
+  .calendermodal .mainwrapper .timezone .timelist ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .calendermodal .mainwrapper .timezone .timelist ul li {
+    width: 120px;
+  }
+  .calendermodal .mainwrapper .timezone {
+    max-width: 100%;
+  }
+  .calendermodal .mainwrapper .timezone .button_wrap {
+    justify-content: flex-end;
+  }
+}
 @media (max-width: 768px) {
   .formContainer {
     max-width: 100%;
@@ -563,3 +844,9 @@
     font-size: 16px;
   }
 } */
+.allmodal {
+  display: none;
+}
+.calendermodal {
+  display: none;
+}

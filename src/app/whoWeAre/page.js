@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./WhoWeAre.module.css";
+import LeaderShip from "@/components/leadershipcomponent/LeaderShip";
 
 const whoWeAre = () => {
   return (
@@ -157,10 +158,11 @@ const whoWeAre = () => {
               <p>
                 By maintaining consistent, accurate records, we help you gain
                 valuable insights into your financial health and performance,
-                allowing you to make well-informed decisions. Whether you're a
-                small business, a growing startup, or an established company,
-                our team handles all your Bookkeeping & Accounting-related tasks
-                so that you can focus on your core business objectives.
+                allowing you to make well-informed decisions. Whether you &apos
+                re a small business, a growing startup, or an established
+                company, our team handles all your Bookkeeping &
+                Accounting-related tasks so that you can focus on your core
+                business objectives.
               </p>
             </div>
           </div>
@@ -299,6 +301,91 @@ const whoWeAre = () => {
                 are as invested in your business as you are. We don’t settle for
                 anything less than perfection, nor should you.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <LeaderShip />
+      <section className={styles.missionsec}>
+        <div class="container mx-auto">
+          <div className={styles.heading}>
+            <h2>
+              The Values At The Core Of <br />
+              <span>Our Result Oriented Mission</span>
+            </h2>
+          </div>
+          <div className={styles.missionwrapper}>
+            <div className={styles.mission}>
+              <div className={styles.icon}>
+                <img src="/m1.png" />
+              </div>
+              <div className={styles.content}>
+                <h4>Personalised Approach</h4>
+                <p>
+                  We believe in building custom strategies that work best for
+                  your business.
+                </p>
+              </div>
+            </div>
+            <div className={styles.mission}>
+              <div className={styles.icon}>
+                <img className={styles.invert} src="/m2.png" />
+              </div>
+              <div className={styles.content}>
+                <h4>Detailed Financial Assessment</h4>
+                <p>
+                  We perform a thorough financial assessment to get a clear
+                  picture of your current situation. 
+                </p>
+              </div>
+            </div>
+            <div className={styles.mission}>
+              <div className={styles.icon}>
+                <img src="/m3.png" />
+              </div>
+              <div className={styles.content}>
+                <h4>Streamlining Processes</h4>
+                <p>
+                  We simplify and optimize processes to improve overall
+                  productivity.
+                </p>
+              </div>
+            </div>
+            <div className={styles.mission}>
+              <div className={styles.icon}>
+                <img src="/m4.png" />
+              </div>
+              <div className={styles.content}>
+                <h4>Commitment to Accuracy</h4>
+                <p>
+                  We deliver work that is thorough, accurate, and reliable every
+                  time.
+                </p>
+              </div>
+            </div>
+            <div className={styles.mission}>
+              <div className={styles.icon}>
+                <img src="/m5.png" />
+              </div>
+              <div className={styles.content}>
+                <h4>Transparency</h4>
+                <p>
+                  Our clients deserve financial clarity, and we provide it
+                  through clear and honest reporting.
+                </p>
+              </div>
+            </div>
+            <div className={styles.mission}>
+              <div className={styles.icon}>
+                <img src="/m6.png" />
+              </div>
+              <div className={styles.content}>
+                <h4>Consistent Support and Improvement</h4>
+                <p>
+                  We simplify and optimize processes to improve overall
+                  productivity.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -45,16 +45,16 @@ const WhatWeDo = () => {
                 errors from evolving into significant financial issues. By
                 prioritizing accuracy in every reconciliation, businesses gain a
                 clearer financial picture, minimize risks, and foster a stable
-                foundation for long-term success."
+                foundation for long-term success.
               </p>
               <p>
                 Our Accounts Reconciliation Services are here to ensure your
                 records match your bank statements and other financial documents
                 precisely. We help you catch any discrepancies early, reduce
-                errors, and keep your accounts balanced. Whether it's daily,
-                weekly, or monthly reconciliation, we adapt to your business
-                needs, taking care of the details so you can focus on what you
-                do best.
+                errors, and keep your accounts balanced. Whether it &apos s
+                daily, weekly, or monthly reconciliation, we adapt to your
+                business needs, taking care of the details so you can focus on
+                what you do best.
               </p>
               <p>
                 We specialize in Bank Reconciliation, Balance Sheet
